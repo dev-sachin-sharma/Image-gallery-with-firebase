@@ -47,16 +47,35 @@
 .img-grid {
   display: flex;
   gap: 10px;
+  justify-content: center;
   width: 100%;
+  
   flex-wrap: wrap;
 }
 .img-wrap {
   border: 5px solid #eeee;
   object-fit: contain;
-  height: 200px;
-  width: 29%;
+   height: 300px;
+  width: 45%;
 }
 .img-wrap > img {
   width: 100%;
   height: 100%;
+  animation: fadeIn ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: rotate(90deg);
+  }
+  50%{
+    transform: scale(),rotate(180deg);
+
+  }
+  100% {
+      opacity: 1;
+      transform: rotate(360deg);
+  }
 }

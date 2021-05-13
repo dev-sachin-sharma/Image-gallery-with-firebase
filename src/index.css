@@ -7,9 +7,21 @@
 }
 
 /* base styles & title */
+
 body{
   font-family: "Noto Serif";
   color: var(--secondary);
+  animation: fadeInAnimation ease 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 .App{
   max-width: 960px;
